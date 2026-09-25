@@ -15,28 +15,7 @@ A hands-on AWS infrastructure project that provisions a load-balanced, auto-scal
 
 The implementation creates a `10.0.0.0/16` VPC with two public and two private subnets across the first two available Availability Zones in `us-east-1`.
 
-```text
-Internet
-   |
-Internet Gateway
-   |
-Application Load Balancer
-(public subnets across 2 AZs)
-   |
-Target Group / HTTP health checks
-   |
-Auto Scaling Group (min 1 / desired 1 / max 6)
-   |
-EC2 instances in private subnets across 2 AZs
-   |
-NAT Gateway for outbound internet access
-
-CloudWatch CPU alarms ---> scale-out / scale-in policies
-IAM instance profile ---> SSM + CloudWatch permissions
-```
-
-> An architecture image can be added under `docs/architecture/` and embedded here later.
-
+![AWS Auto Scaling Architecture](docs/architecture/aws-autoscaling-architecture.png)
 ## AWS services and tools
 
 **AWS:** VPC, EC2, Application Load Balancer, Auto Scaling, CloudWatch, IAM, Systems Manager, NAT Gateway, Elastic IP
