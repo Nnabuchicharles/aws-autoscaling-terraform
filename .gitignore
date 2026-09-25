@@ -1,0 +1,25 @@
+# Terraform local/generated files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+*.plan
+
+# Local variable/secrets files
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Keys and environment files
+*.pem
+*.key
+.env
+.env.*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
